@@ -2,6 +2,6 @@
 잘사니 백엔드
 
 ## Spring version 
-3.0.7-SNAPSHOT
+2.7.10
 ## JAVA version
 11
