@@ -16,6 +16,7 @@ public class UserSearch {
     private String address;
     private LocalDateTime birth;
     private String photoPath;
+    private String mbti;
 
 
 

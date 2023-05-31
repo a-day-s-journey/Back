@@ -14,6 +14,7 @@ public class UserResponse {//응답클래스
     private String address;
     private LocalDateTime birth;
     private String photoPath;
+    private String mbti;
 
     public UserResponse(User user) { //생성자 오버로딩
         this.id = user.getId();
@@ -22,6 +23,7 @@ public class UserResponse {//응답클래스
         this.address = user.getAddress();
         this.birth = user.getBirth();
         this.photoPath = user.getPhotoPath();
+        this.mbti = user.getMbti();
     }
 
 }
