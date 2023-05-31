@@ -13,7 +13,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Getter
 @NoArgsConstructor
-public class school {
+public class school extends BaseEntity{
 
     @Id @GeneratedValue(strategy = IDENTITY)
     @NotNull

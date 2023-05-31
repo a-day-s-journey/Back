@@ -15,7 +15,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Getter
 @NoArgsConstructor
-public class user {
+public class user extends BaseEntity{
 
     @Id @GeneratedValue(strategy = IDENTITY)
     @NotNull
