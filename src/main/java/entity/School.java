@@ -13,16 +13,16 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Getter
 @NoArgsConstructor
-public class userSchool extends BaseEntity{
+public class School extends BaseEntity{
 
     @Id @GeneratedValue(strategy = IDENTITY)
-    private Long id;
+    @NotNull
+    private String id;
 
     @NotNull
-    private Long userId;
+    private String level;
 
-    private String SchoolId;
-
-    private int graduationYear;
+    @NotNull
+    private String name;
 
 }
