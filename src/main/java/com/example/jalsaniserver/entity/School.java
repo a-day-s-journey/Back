@@ -1,4 +1,4 @@
-package entity;
+package com.example.jalsaniserver.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

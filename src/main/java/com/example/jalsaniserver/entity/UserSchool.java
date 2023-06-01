@@ -1,4 +1,4 @@
-package entity;
+package com.example.jalsaniserver.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,39 +8,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
-import java.time.LocalDateTime;
-
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Getter
 @NoArgsConstructor
-public class User extends BaseEntity{
+public class UserSchool extends BaseEntity{
 
     @Id @GeneratedValue(strategy = IDENTITY)
-    @NotNull
     private Long id;
 
     @NotNull
-    private String name;
+    private Long userId;
 
-    @NotNull
-    private String phone;
+    private String SchoolId;
 
-    @NotNull
-    private String address;
-
-    private LocalDateTime birth;
-
-    private String photoPath;
-
-    private String mbti;
-
-
-
-
-
-
-
+    private int graduationYear;
 
 }

@@ -1,4 +1,4 @@
-package dto.request;
+package com.example.jalsaniserver.dto.request;
 
 import lombok.Getter;
 import lombok.Setter;

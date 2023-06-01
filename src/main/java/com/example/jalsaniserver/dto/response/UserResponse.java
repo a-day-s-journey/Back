@@ -1,6 +1,7 @@
-package dto.response;
+package com.example.jalsaniserver.dto.response;
 
-import entity.User;
+import com.example.jalsaniserver.entity.User;
+import lombok.Builder;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -26,4 +27,14 @@ public class UserResponse {//응답클래스
         this.mbti = user.getMbti();
     }
 
+    @Builder
+    public UserResponse(Long id, String name,String phone,String address, LocalDateTime birth, String photoPath, String mbti){
+        this.id = id;
+        this.name = name;
+        this.phone = phone;
+        this.address = address;
+        this.birth = birth;
+        this.photoPath = photoPath;
+        this.mbti = mbti;
+    }
 }
