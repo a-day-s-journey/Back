@@ -3,10 +3,11 @@ package com.example.jalsaniserver.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
@@ -16,13 +17,19 @@ import static javax.persistence.GenerationType.IDENTITY;
 public class School extends BaseEntity{
 
     @Id @GeneratedValue(strategy = IDENTITY)
-    @NotNull
     private String id;
 
-    @NotNull
+
     private String level;
 
-    @NotNull
+
     private String name;
+
+    @OneToMany(mappedBy = "school")
+    private List<UserSchool> userSchools = new ArrayList<>();
+
+    public School(String name){
+        this.name = name;
+    }
 
 }
