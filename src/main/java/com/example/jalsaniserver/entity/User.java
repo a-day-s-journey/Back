@@ -5,12 +5,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
@@ -21,16 +20,15 @@ import static javax.persistence.GenerationType.IDENTITY;
 public class User extends BaseEntity{
 
     @Id @GeneratedValue(strategy = IDENTITY)
-    @NotNull
     private Long id;
 
-    @NotNull
+
     private String name;
 
-    @NotNull
+
     private String phone;
 
-    @NotNull
+
     private String address;
 
     private LocalDateTime birth;
@@ -38,6 +36,9 @@ public class User extends BaseEntity{
     private String photoPath;
 
     private String mbti;
+
+    @OneToMany(mappedBy = "user")
+    private List<UserSchool> userSchools = new ArrayList<>();
 
     @Builder
     public User(Long id, String name, String phone, String address, LocalDateTime birth, String photoPath, String mbti) {
@@ -49,4 +50,9 @@ public class User extends BaseEntity{
         this.photoPath = photoPath;
         this.mbti = mbti;
     }
+
+    public User(String name){
+        this.name = name;
+    }
+
 }

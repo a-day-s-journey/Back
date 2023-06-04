@@ -2,6 +2,7 @@ package com.example.jalsaniserver.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -16,9 +17,8 @@ import static javax.persistence.GenerationType.IDENTITY;
 @NoArgsConstructor
 public class School extends BaseEntity{
 
-    @Id @GeneratedValue(strategy = IDENTITY)
+    @Id
     private String id;
-
 
     private String level;
 
