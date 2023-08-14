@@ -26,13 +26,20 @@ repositories {
 }
 
 dependencies {
+	runtimeOnly 'com.mysql:mysql-connector-j'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+//	implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+//	annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+//	annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
 	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
 	implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
+	//mybatis
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	implementation 'org.jetbrains:annotations:24.0.0'
+	//mybatisS
 	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 

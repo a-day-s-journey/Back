@@ -11,7 +11,9 @@ import javax.persistence.EntityManager;
 public class JalsaniServerApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(JalsaniServerApplication.class, args);
+
 	}
 	@Bean
 	JPAQueryFactory jpaQueryFactory(EntityManager em){
