@@ -5,13 +5,13 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
-import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
 @Getter
@@ -19,21 +19,21 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Table(name = "USER_TABLE")//h2 database에 user라는 keyword에 테이블명이 User 불가능
 public class User extends BaseEntity{
 
-    @Id @GeneratedValue(strategy = IDENTITY)
-    private Long id;
-
+    @Id
+    private String id;
 
     private String name;
 
 
     private String phone;
 
+    private String mail;
 
     private String address;
 
     private LocalDateTime birth;
 
-    private String photoPath;
+    private String photopath;
 
     private String mbti;
 
@@ -41,13 +41,14 @@ public class User extends BaseEntity{
     private List<UserSchool> userSchools = new ArrayList<>();
 
     @Builder
-    public User(Long id, String name, String phone, String address, LocalDateTime birth, String photoPath, String mbti) {
+    public User(String id, String name, String phone,String mail, String address, LocalDateTime birth, String photopath, String mbti) {
         this.id = id;
         this.name = name;
         this.phone = phone;
+        this.mail = mail;
         this.address = address;
         this.birth = birth;
-        this.photoPath = photoPath;
+        this.photopath = photopath;
         this.mbti = mbti;
     }
 

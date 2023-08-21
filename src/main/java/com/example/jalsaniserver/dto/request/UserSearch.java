@@ -10,12 +10,12 @@ import java.time.LocalDateTime;
 public class UserSearch {
 
 
-    private Long id;
+    private String id;
     private String name;
     private String phone;
     private String address;
     private LocalDateTime birth;
-    private String photoPath;
+    private String photopath;
     private String mbti;
 
 

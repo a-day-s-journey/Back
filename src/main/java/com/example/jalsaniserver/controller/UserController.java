@@ -20,10 +20,7 @@ public class UserController {
 
     //마이페이지 조회
     @GetMapping("/users/{id}")
-    public List<UserMapperDto> findMypage(@PathVariable("id") Long id) throws Exception {
+    public List<UserMapperDto> findMypage(@PathVariable("id") String id) throws Exception {
         return userService.findMypage();
     }
-
-
-
 }

@@ -7,9 +7,10 @@
             id
             ,name
             ,phone
+            ,mail
             ,address
             ,birth
-            ,photoPath
+            ,photopath
             ,mbti
         from USER_TABLE
     </select>
